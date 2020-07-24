@@ -1,0 +1,109 @@
+en:
+- title: About
+  hovertitle: About Us
+  link: /about
+#  icon: <i class="far fa-hand-paper"></i>
+  icon: <i class='far fa-address-card'></i>
+- title: Working Groups
+  icon: <i class='fas fa-pencil-alt'></i>
+  submenu:
+    - subtitle: Indigenous solidarity
+      sublink: /wg/indigenous
+    - subtitle: Education
+      sublink: /wg/education
+    - subtitle: Action & Resistance
+      sublink: /wg/action
+#      subicon: <i class="fas fa-universal-access fa-fw"></i>
+- title: Past Events
+  link: /past-events
+  icon: <i class='far fa-calendar'></i>
+- title: Donate
+  link: /donate
+  icon: <i class='fas fa-coins'></i>
+- title: Contact
+  link: /contact
+  icon: <i class='far fa-envelope-open'></i>
+
+fr:
+- title: Qui sommes-nous
+#  icon: <i class="far fa-hand-paper"></i>
+  link: /a_propos
+  icon: <i class='far fa-address-card'></i>
+- title: Groupes de travail
+  icon: <i class='fas fa-pencil-alt'></i>
+  submenu:
+    - subtitle: Solidarité avec les peuples autochtones
+      sublink: /gt/autochtone
+    - subtitle: S'informer
+      sublink: /gt/sinformer
+    - subtitle: Action et résistance
+      sublink: /gt/résistance
+- title: Événements passés
+  link: /passé
+  icon: <i class='far fa-calendar'></i>
+- title: Donner
+  link: /don
+  icon: <i class='fas fa-coins'></i>
+- title: Contact
+  link: /contact-fr
+  icon: <i class='far fa-envelope-open'></i>
+
+welcome:
+- title: Bienvenue
+  link: /accueil
+  lang: fr
+- title: Welcome
+  link: /home
+  lang: en
+
+footer-en: 
+- title: Home
+  link: /index-en
+- title: Accueil
+  link: /accueil
+- title: About
+  link: /about
+- title: Contact
+  link: /contact
+
+footer-fr:
+- title: Accueil
+  link: /accueil
+- title: Home
+  link: /home
+- title: À propos
+  link: /a_propos
+- title: Contact
+  link: /contact-fr
+
+wg:
+- title: Education
+  icon: <i class="far fa-lightbulb fa-2x"></i>
+  link: /wg/education
+- title: Action and Resistance
+  icon: <i class="fas fa-lock fa-2x"></i>
+  link: /wg/action
+- title: Indigenous Solidarity
+  icon: <i class="far fa-bell fa-2x"></i>
+  link: /wg/indigenous
+
+gt:
+- title: S'informer
+  icon: <i class="far fa-lightbulb fa-2x"></i>
+  link: /gt/sinformer
+- title: Action et Résistance
+  icon: <i class="fas fa-lock fa-2x"></i>
+  link: /gt/résistance
+- title: Solidarité
+  icon: <i class="far fa-bell fa-2x"></i>
+  link: /gt/autochtone
+
+social-media:
+- icon: <i class="fab fa-twitter"></i>
+  link: https://twitter.com/cj_montreal
+  bg-color: #00acee
+  name: twitter
+- icon: <i class="fab fa-facebook-f"></i>
+  link: https://facebook.com/ClimateJusticeMontreal
+  bg-color: #3b5998
+  name: facebook

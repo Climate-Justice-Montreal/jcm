@@ -7,13 +7,14 @@ layout: compress
 <head>
   <meta charset="UTF-8">
   <!-- Preload some files and fonts to improve page load speed -->
-  <link rel="preload" href="/assets/css/navstyle.css" as="style">
+  <link rel="preload" href="{{ site.data.jcm.source }}/assets/css/navstyle.css" as="style">
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="preload" href="/assets/css/fa-custom.css" as="style">
    <!-- <link rel="preload" href="/assets/images{{ hero-image }}.jpg" as="jpg">
  <link rel="preload" href="/assets/google_fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin> -->
   <link rel="preload" href="/assets/google_fonts/Bitter/Bitter-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="/assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/google_fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="/assets/google_fonts/Source_Sans_Pro/SourceSansPro-Black.ttf" as="font" type="font/ttf" crossorigin>
@@ -36,8 +37,8 @@ layout: compress
   <link rel="manifest" href="/manifest{% if fr %}-fr{% endif %}.webmanifest">
   {% comment %}{% if page.trans == "index" %}<link rel="dns-prefetch" href="https://youtube.com">{% endif %}
   {% if page.trans == "calendar" %}<link rel="dns-prefetch" href="https://calendar.google.com">{% endif %}{% endcomment %}
-  {% comment %}Default title in English but in French too
-  <title>{% if fr %}{{ site.title-fr }}{% else %}{{ site.title }}{% endif %}</title>{% endcomment %}
+  {% comment %}Default title in English but in French too{% endcomment %}
+  <title>{% if fr %}{{ site.title-fr }}{% else %}{{ site.title }}{% endif %}</title>
   <! -- search header -->
   {% if page.tipue_search_active or layout.tipue_search_active %}
   <!-- <link rel="stylesheet" href="/assets/tipuesearch/tipuesearch-{% if fr %}fr{% else %}en{% endif %}/css/normalize.css"> jquery3.1.1-->
@@ -86,7 +87,9 @@ layout: compress
 	{% comment %}Tricky to get Google's iframes, especially the Calendar, to look good in mobile without serving a special page{% endcomment %}
    {% unless page.trans == "calendar" %}
 	<div class="content">
+
     {{ content }}
+    {{ site.data.jcm.source }}
     <br>
 	</div>
        {% endunless %}
