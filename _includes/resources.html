@@ -15,7 +15,7 @@
       </a>
     </div>
     <div>
-      Download <a href="https://drive.google.com/file/d/{{ item.gkey }}/view?usp=sharing">{{ item.name }}</a></p>
+      {% if fr %}Téléchargez{% else %}Download{% endif %} <a href="https://drive.google.com/file/d/{{ item.gkey }}/view?usp=sharing"><i>{{ item.name }}</i></a></p>
     </div>
       {% endif %}
     {% endfor %}
@@ -23,7 +23,7 @@
 </div>
   <div class=right>
 {% for post in posty %}
-  {% for each in post.tags %}{% if each contains page.trans and post.lang == page.lang %}{% assign go = true %}{% endif %}{% endfor %}
+  {% for each in post.tags %}{% if post.lang == page.lang and each contains page.trans or each contains page.gt %}{% assign go = true %}{% endif %}{% endfor %}
     {% if go %}
     {% assign post_counter = post_counter | plus: 1 %}
       {% if post_counter == 1 %}   
@@ -70,9 +70,10 @@
          {% if file.type == "jpg" %}{% assign realtype = file.type %}{% else %}{% assign realtype = "png" %}{% endif %}
         {% include picture.html basename=realfile type=realtype alt=file.name class=img_center %}
       {% comment %}width="300" height="300"{% endcomment %}
+      </a>
     </div>
     <div class="material-cell-desc">
-      Download <a href="https://drive.google.com/file/d/{{ file.gkey }}/view?usp=sharing">{{ file.name }}</a>
+      {% if fr %}Téléchargez{% else %}Download{% endif %} <a href="https://drive.google.com/file/d/{{ file.gkey }}/view?usp=sharing"><i>{{ file.name }}</i></a>
     </div>
   </div>
     {% endif %}
